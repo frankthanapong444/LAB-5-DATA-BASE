@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_application_1/screens/form_screen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -39,13 +40,19 @@ class _MyHomePageState extends State<MyHomePage> {
               icon: Icon(Icons.add),
               onPressed: () {
                 Navigator.push(context, MaterialPageRoute(builder: (context) {
-                  return Text("Screen 2");
+                  return FormScreen();
                 }));
               })
         ],
       ),
-      body: Container(),
+      body: ListView.builder(itemBuilder: (context, int index) {
+        return Card(
+          elevation: 10,
+          child: ListTile(
+            title: Text("เมนู"),
+          ),
+        );
+      }),
     );
   }
 }
-//Navigation & Route
