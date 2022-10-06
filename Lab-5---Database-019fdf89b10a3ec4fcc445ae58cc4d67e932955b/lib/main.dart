@@ -47,7 +47,8 @@ class _MyHomePageState extends State<MyHomePage> {
       ),
       body: ListView.builder(itemBuilder: (context, int index) {
         return Card(
-          elevation: 10,
+          elevation: 5,
+          margin: const EdgeInsets.symmetric(vertical: 10, horizontal: 5),
           child: ListTile(
             title: Text("เมนู"),
           ),
